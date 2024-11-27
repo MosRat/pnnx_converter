@@ -1,2 +1,2 @@
 pnnx
-nccn
+ncnn
