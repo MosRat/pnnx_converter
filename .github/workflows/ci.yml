@@ -22,14 +22,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Install pnnx
+        run: |
+          echo  pnnx > requirements.txt
+          echo  nccn >> requirements.txt
+    
       - name: Setup Python
         uses: actions/setup-python@v5.3.0
         with:
           python-version: 3.11
           cache: pip
-      - name: Install pnnx
-        run: |
-          pip3 install pnnx nccn
+
 
       - name: Check install
         run: pnnx
